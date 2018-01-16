@@ -1,0 +1,507 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+  margin: 0;
+}
+
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
+}
+
+::-moz-selection {
+  background-color: #6ab344;
+  color: #fff;
+}
+
+::selection {
+  background-color: #6ab344;
+  color: #fff;
+}
+
+.portfolio-search-box .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.portfolio-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
+}
+
+
+.mdl-textfield--expandable {
+  width: auto;
+}
+
+.portfolio-fab {
+  position: absolute;
+  right: 20%;
+  bottom: -26px;
+  z-index: 3;
+  background: #6100a0 !important;
+  color: #fff !important;
+}
+
+.portfolio-mobile-title {
+  display: none !important;
+}
+
+
+.portfolio-logo-image {
+  height: 64px;
+  width: 64px;
+}
+
+
+.portfolio-header {
+  overflow: visible;
+  background-color: white;
+}
+
+  .portfolio-header .material-icons {
+    color: #767777 !important;
+  }
+
+  .portfolio-header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+  }
+
+  .portfolio-header .mdl-navigation__link {
+    color: #757575;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .portfolio-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .portfolio-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 800px;
+  }
+
+  .portfolio-search-box.is-focused + .portfolio-navigation-container {
+    opacity: 0;
+    width: 100px;
+  }
+
+
+  .portfolio-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+  }
+
+    .portfolio-navigation .mdl-navigation__link:hover {
+      border-bottom: 4px solid #8bc34a;
+    }
+
+  .portfolio-search-box {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .portfolio-more-button {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+
+.portfolio-drawer {
+  border-right: none;
+}
+
+  .portfolio-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+  }
+
+  .portfolio-drawer .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #757575;
+  }
+
+  .portfolio-drawer span.mdl-navigation__link.mdl-navigation__link {
+    color: #8bc34a;
+  }
+
+  .portfolio-drawer .mdl-layout-title {
+    position: relative;
+    background: #6ab344;
+    height: 160px;
+  }
+
+    .portfolio-drawer .portfolio-logo-image {
+      position: absolute;
+      bottom: 16px;
+    }
+
+.portfolio-be-together-section {
+  position: relative;
+  height: 800px;
+  width: auto;
+  background-color: #f3f3f3;
+  background: url('images/mdl-handlebars.png') center 50% no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.clicker {
+  height: 800px;
+}
+
+.logo-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  color: #767777;
+  font-weight: 500;
+}
+
+.portfolio-slogan {
+  font-size: 60px;
+  padding-top: 160px;
+}
+
+.portfolio-sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+.portfolio-create-character {
+  font-size: 21px;
+  padding-top: 400px;
+}
+
+  .portfolio-create-character a {
+    text-decoration: none;
+    color: #767777;
+    font-weight: 300;
+  }
+
+.portfolio-screen-section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  min-height: 700px;
+}
+
+.mdl-calc-image {
+  height: 700px;
+  width: 721px;
+  background: url("images/mdl-calc-wide.png");
+}
+
+@media (max-width: 1500px) {
+  .mdl-calc-image {
+  height: 700px;
+  width: 362px;
+  background: url("images/mdl-calc-thin.png");
+  }
+}
+
+.portfolio-wear-section {
+  position: relative;
+  background: url('images/wear.png') center top no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.portfolio-wear-band {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #37474f;
+}
+
+.portfolio-wear-band-text {
+  max-width: 800px;
+  margin-left: 25%;
+  padding: 24px;
+  text-align: left;
+  color: white;
+}
+
+  .portfolio-wear-band-text p {
+    padding-top: 8px;
+  }
+
+.portfolio-link {
+  text-decoration: none;
+  color: #8bc34a !important;
+}
+
+  .portfolio-link:hover {
+    color: #7cb342 !important;
+  }
+
+  .portfolio-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+
+.portfolio-alt-link {
+  text-decoration: none;
+  color: #64ffda !important;
+  font-size: 16px;
+}
+
+  .portfolio-alt-link:hover {
+    color: #00bfa5 !important;
+  }
+
+  .portfolio-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+.portfolio-customized-section {
+  text-align: center;
+}
+
+.portfolio-customized-section-text {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 16px 0 16px;
+}
+
+  .portfolio-customized-section-text p {
+    padding-top: 16px;
+  }
+
+.portfolio-customized-section-image {
+  background: url('images/devices.jpg') center top no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.portfolio-more-section {
+  padding: 80px 0;
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .portfolio-more-section .portfolio-section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+  }
+
+  .portfolio-card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+  }
+
+    .portfolio-card-container .mdl-card__media img {
+      width: 100%;
+    }
+
+  .portfolio-card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+  }
+
+  .portfolio-card-container .mdl-card__title-text {
+    color: black;
+    height: auto;
+  }
+
+  .portfolio-card-container .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 56px;
+  }
+
+  .portfolio-card-container .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .portfolio-card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+  }
+
+.portfolio-footer {
+  background-color: #fafafa;
+  position: relative;
+}
+
+.portfolio-footer a:hover {
+  color: #8bc34a;
+}
+
+.portfolio-footer .mdl-mega-footer--top-section::after {
+  border-bottom: none;
+}
+
+.portfolio-footer .mdl-mega-footer--middle-section::after {
+  border-bottom: none;
+}
+
+.portfolio-footer .mdl-mega-footer--bottom-section {
+  position: relative;
+}
+
+.portfolio-footer .mdl-mega-footer--bottom-section a {
+  margin-right: 2em;
+}
+
+.portfolio-footer .mdl-mega-footer--right-section a .material-icons {
+  position: relative;
+  top: 6px;
+}
+
+
+.portfolio-link-menu:hover {
+  cursor: pointer;
+}
+
+
+/**** Mobile layout ****/
+@media (max-width: 940px) {
+  .portfolio-navigation-container {
+    display: none;
+  }
+
+  .portfolio-title {
+    display: none !important;
+  }
+
+  .portfolio-mobile-title {
+    display: block !important;
+    position: absolute;
+    left: calc(50% - 70px);
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+     consecutive "+" operators in some cases. Therefore, we need to use both
+     here to cover all the bases. */
+  .portfolio.portfolio-search-box.is-focused ~ .portfolio-mobile-title,
+  .portfolio-search-box.is-focused + .portfolio-navigation-container + .portfolio-mobile-title {
+    opacity: 0;
+  }
+
+  .portfolio-more-button {
+    display: none;
+  }
+
+  .portfolio-search-box.is-focused {
+    width: calc(100% - 48px);
+  }
+
+  .portfolio-search-box .mdl-textfield__expandable-holder {
+    width: 100%;
+  }
+
+  .portfolio-be-together-section {
+    height: 350px;
+  }
+
+  .portfolio-slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .portfolio-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .portfolio-create-character {
+    padding-top: 200px;
+    font-size: 16px;
+  }
+
+  .portfolio-create-character img {
+    height: 12px;
+  }
+
+  .portfolio-fab {
+    display: none;
+  }
+
+  .portfolio-wear-band-text {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .portfolio-footer .mdl-mega-footer--bottom-section {
+    display: none;
+  }
+}
+
+.mdl-layout {
+  min-width: 360px;
+}
+
+.mdl-calc-desc {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.pb-4 {
+  padding-bottom: 16px;
+}
+
+@media (max-width: 1200px) {
+  .skill-size {
+    width: 196px;
+  }
+}
+
+.h3 {
+  font-size: 48px;
+}
+
+.portfolio-max-width {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.purple-button {
+  color: #6100a0 !important;
+}
+
+.mdl-card__supporting-text {
+  min-height: 104px;
+}
